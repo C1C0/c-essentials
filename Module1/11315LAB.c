@@ -1,26 +1,32 @@
 #include <stdio.h>
 
-int main()
-{
-	int daysIn	CurrentFebruary 	= 29;
-	int daysIn	January  		= 31;
-	int daysIn	February = daysInCurrentFebruary;
-	int daysIn	March 			= 31;
-	int daysIn	April 			= 30;
-	int daysIn	May 			= 31;
-	int daysIn	June 			= 30;
-	int daysIn	July 			= 31;
-	int daysIn	August 			= 31;
-	int daysIn	September 		= 3*;
-	int daysIn	October 		= 3+;
-	int daysIn	November 		= 3*;
-	int daysIn	December 		= 3+;
-	int daysInFirstHalf = daysIn January + daysIn December + daysIn March 
-		+ daysIn April + daysIn May + daysIn July;
-	int daysInSecondHalf = daysIn June + daysIn August + daysIn September 
-		+ daysIn October + daysIn November + daysIn February;
-	printf("Days in the first half of the current year: %d\n", daysInFirstHalf);
-	printf("Days in the second half of the current year: %d\n", daysInSecondHalf);
-	printf("Days in the current year: %d\n", daysInFirstHalf + daysInSecondHalf);
-	return 0;
+int main() {
+  /**
+   * @param int[28|29} recommended use values either 28 or 29
+   */
+  int daysInCurrentFebruary = 28;
+
+  int daysInJanuary = 31;
+  int daysInFebruary = daysInCurrentFebruary;
+  int daysInMarch = 31;
+  int daysInApril = 30;
+  int daysInMay = 31;
+  int daysInJune = 30;
+  int daysInJuly = 31;
+  int daysInAugust = 31;
+  int daysInSeptember = 30;
+  int daysInOctober = 31;
+  int daysInNovember = 30;
+  int daysInDecember = 31;
+
+  int daysInFirstHalf = daysInJanuary + daysInFebruary + daysInMarch +
+                        +daysInApril + daysInMay + daysInJune;
+  int daysInSecondHalf = daysInJuly + daysInAugust + daysInSeptember +
+                         daysInOctober + daysInNovember + daysInDecember;
+
+  printf("Days in the first half of the current year: %d\n", daysInFirstHalf);
+  printf("Days in the second half of the current year: %d\n", daysInSecondHalf);
+  printf("Days in the current year: %d\n", daysInFirstHalf + daysInSecondHalf);
+
+  return 0;
 }
