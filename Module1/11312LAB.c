@@ -2,7 +2,7 @@
 
 int main()
 {
-	int simpleVari able = 10;
-	printf("The value of ten is: %d \n", otherVariable);
+	int simpleVariable = 10;
+	printf("The value of ten is: %d \n", simpleVariable);
 	return 0;
 }
