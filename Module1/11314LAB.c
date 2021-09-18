@@ -2,10 +2,10 @@
 
 int main()
 {
-	int ip Part1 = 027;
-	int ip Part2 = 0;
-	int ip Part3 = 0;
-	int ip Part4 = 1;
+	int ipPart1 = 127;
+	int ipPart2 = 1;
+	int ipPart3 = 1;
+	int ipPart4 = 1;
 
-	printf("Localhost IP is %d.%d.%d.%d\n", ip Part1, ip Part2, ip Part3, ip Part4);
+	printf("Localhost IP is %d.%d.%d.%d\n", ipPart1, ipPart2, ipPart3, ipPart4);
 }
