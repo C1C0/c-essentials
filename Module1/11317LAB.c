@@ -1,19 +1,17 @@
-#include <stdio.h> /* we included stdio.h */
-#include <stdlib.h> /* we included stdlib.h */
+#include <stdio.h>
+#include <stdlib.h>
 
-int main()
-{
-  int v=10800; /* 3*60*60 */
-  
-  int zzz=3*60; /* This is a variable to hold the value of 3 minutes in seconds */
+int main() {
+  int v = 10800; /* 3*60*60 */
 
-  int zzz=5*60; /* This is a variable to hold the value of 6 minutes in seconds */
-  
-  float siii=3.141526; /* This is the value of pi */
-  
-  
-  /* printf(" value of some variable: %d \n", otherVariable);
-      here we should print the v value, but a programmer didn't have time to write the code.
-      However, he/she likes writing long, well formatted comments
+  /**
+   * @brief stores specified number of minutes in seconds
+   *
    */
+  int threeMinutes = 3 * 60;
+  int sixMinutes = 6 * 60;
+
+  float pi = 3.141526;
+
+  printf("Value of some variable: %d \n", pi);
 }
