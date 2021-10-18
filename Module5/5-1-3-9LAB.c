@@ -1,21 +1,16 @@
 #include <stdio.h>
 
-int main()
+int main(void) 
 {
-	/* your code */
-    char day;
-    char *days[7] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" };
-
-    scanf("%d", &day);
-
-    if(day < 0 || day >= 7){
-        printf("Error, no such day");
-        return -1;
-    }
-
-    printf("Pointer version: %s\n", *(days + day));
-    printf("Array index version: %s", days[day]);
-
-
+	char days[7][10] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
+	int day;
+	scanf("%d", &day);
+	if (day >= 0 && day < 7)
+	{
+		printf("Pointer version: %s\n", days + day);
+		printf("Array index version: %s\n", days[day]);
+	}
+	else
+		puts("Error, no such day.");
 	return 0;
 }
