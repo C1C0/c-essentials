@@ -1,48 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
-  /* your code */
-  int requestedAllocatedMemoryB, i;
-  char *letters, letter = 'A';
-
-  scanf("%d", &requestedAllocatedMemoryB);
-
-  // check max bytes available
-  if (requestedAllocatedMemoryB > 1024 * 1024) {
-    printf("Too much memory requested.");
-    return 1;
-  }
-
-  // allocate needed size
-  letters = (char *)malloc(requestedAllocatedMemoryB * sizeof(char));
-  if (letters == NULL) {
-    printf("Allocation failed – sorry.\n");
-    return 1;
-  }
-
-  // fill in the array
-  for (i = 0; i < requestedAllocatedMemoryB; i++) {
-    if (letter > 'Z') {
-      letter = 'A';
-    }
-
-    letters[i] = letter;
-
-    letter++;
-  }
-
-  // print the numbers
-  for (i = 0; i < 400; i++) {
-    if (i == requestedAllocatedMemoryB) {
-      break;
-    }
-
-    if (i >= 40 && i % 40 == 0) {
-      printf("\n");
-    }
-    printf("%c", letters[i]);
-  }
-
-  return 0;
+int main(void)
+{
+	int size;
+	scanf("%d", &size);
+	if(size>=1024*1024)
+	{
+		puts("Too much memory requested.");
+	}
+	else
+	{
+		char *values=(char *) malloc (sizeof(char) * size) ;
+		/* sizeof(char) is defined in standard as 1 and you don't have to write it */
+		int i;
+		for(i=0 ; i < size ; i++)
+		{
+			values[i] = 'A' + (i % 26);
+		}
+		int boundaries = size;
+		if (boundaries > 400)
+			boundaries = 400;
+		for (i=0 ; i < boundaries ; i++)
+		{
+			printf("%c", values[i]);
+			if ((i+1) % 40 == 0)
+				printf("\n");
+		}
+		printf("\n");
+	}
+	return 0;
 }
