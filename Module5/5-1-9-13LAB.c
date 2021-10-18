@@ -31,11 +31,11 @@ int getOneOrTwo(int param)
 
 int main(void)
 {
-	int fiveValue ; /* your code */
-	int sixValue ; /* your code */
-	int sevenValue ; /* your code */
-	int eightValue ; /* your code */
-	int nineValue ; /* your code */
+	int fiveValue = getValue(11, 5.4); /* your code */
+	int sixValue = getValue(11, 5.6); /* your code */
+	int sevenValue = getValue(11, 5.6) + getOneOrTwo(0); /* your code */
+	int eightValue = getValue(11, 5.6) + getOneOrTwo(6); /* your code */
+	int nineValue = getValue(11, 5.6) + getOneOrTwo(6) + getOneOrTwo(0) ; /* your code */
 	
 	printf("Five: %d\n", fiveValue);
 	printf("Six: %d\n", sixValue);

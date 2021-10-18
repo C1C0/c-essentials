@@ -12,5 +12,12 @@ void another()
 int main(void)
 {
 	/* your code */
+    hello();
+    hello();
+    hello();
+    another();
+    hello();
+    another();
+
 	return 0;
 }
