@@ -1,47 +1,51 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
-  /* your code */
-  char matrixSize;
-  int **matrix, r, c;
+int main(void)
+{
+	int size;
+	scanf("%d", &size);
+	if(size>20)
+	{
+		puts("Matrix too big.");
+	}
+	else
+	{
+		int **matrix = (int**)malloc(sizeof(int *) * size);
+		int i, j;
+		for (i=0; i < size ; i++)
+		{
+			matrix[i] = (int*)malloc(sizeof(int) * size);
+		}
 
-  scanf("%d", &matrixSize);
+		for (i = 0; i<size; i++)
+		{
+			for (j = 0; j<size; j++)
+			{
+				matrix[i][j] = (i + 1)*(j + 1);
+			}
+		}
+		printf("%4c", ' ');
+		for (j = 0; j<size; j++)
+		{
+			printf("%4d", j+1);
+		}
+		printf("\n");
+		for (i = 0; i<size; i++)
+		{
+			printf("%4d", i+1);
+			for (j = 0; j<size; j++)
+			{
+				printf("%4d", matrix[i][j]);
+			}
+			printf("\n");
+		}
+		for (i = 0; i < size; i++)
+		{
+			free(matrix[i]);
+		}
+		free(matrix);
 
-  if (matrixSize > 20) {
-    puts("Matrix too big.");
-    return 1;
-  }
-
-  // fill in the matrix
-  matrix = (int **)malloc(matrixSize * sizeof(int *));
-
-  // first row
-  printf("%4c", ' ');
-  for (r = 0; r < matrixSize; r++) {
-    printf("%4d", r + 1);
-  }
-  printf("\n");
-
-  for (r = 0; r < matrixSize; r++) {
-    matrix[r] = (int *)malloc(matrixSize * (sizeof(int)));
-
-    for (c = 0; c < matrixSize; c++) {
-      matrix[r][c] = (r + 1) * (c + 1);
-    }
-  }
-
-  // display the matrix
-  for (r = 0; r < matrixSize; r++) {
-    printf("%4d", r + 1);
-    for (c = 0; c < matrixSize; c++) {
-      printf("%4d", matrix[r][c]);
-    }
-    printf("\n");
-    free(matrix[r]);
-  }
-
-  free(matrix);
-
-  return 0;
+	}
+	return 0;
 }
