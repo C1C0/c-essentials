@@ -1,3 +1,4 @@
 *.exe
 /testing
 .vscode
+temp*
