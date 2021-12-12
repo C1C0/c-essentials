@@ -2,6 +2,7 @@
     "files.associations": {
         "stdio.h": "c",
         "cstdlib": "cpp",
-        "ctype.h": "c"
+        "ctype.h": "c",
+        "type_traits": "c"
     }
 }
